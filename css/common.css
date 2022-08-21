@@ -22,3 +22,22 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+
+/* Стили галереи */
+
+.gallery{
+display: grid;
+grid-template: repeat(3, auto)/1fr;
+row-gap: 16px;
+
+padding: 0;
+
+list-style: none;
+
+}
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
