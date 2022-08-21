@@ -3,10 +3,6 @@ const welcomSign = {
     output: document.querySelector('#name-output'),
 };
 
-// welcomSign.input.addEventListener('input', (event) => {
-//     welcomSign.output.textContent = event.currentTarget.value;
-// });
-
 welcomSign.input.addEventListener('input', addText);
 
 function addText(event) {
