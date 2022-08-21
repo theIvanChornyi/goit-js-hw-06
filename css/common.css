@@ -24,9 +24,11 @@ button {
 }
 
 
-/* Стили галереи */
+/* Стили галереи, 3-е задание */
 
 .gallery{
+margin: 0 auto;
+max-width: 800px;
 display: grid;
 grid-template: repeat(3, auto)/1fr;
 row-gap: 16px;
