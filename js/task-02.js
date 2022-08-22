@@ -18,9 +18,6 @@ function addIngridientEl(ingredients) {
   });
 
   ingredientsListEl.append(...newIngredientsEl);
-  
-  // Просто коментарий в консоль
-  return `All done, check HTML`;
 }
 
-console.log(addIngridientEl(ingredients));
+addIngridientEl(ingredients);
