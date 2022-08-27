@@ -19,8 +19,7 @@ function submit(event) {
 
     console.log(userAnswear);
 
-    modFormEl.email.value = '';
-    modFormEl.password.value = '';
+    event.currentTarget.reset();
 }
 
 
