@@ -8,14 +8,14 @@ function submit(event) {
 
     const modFormEl = event.currentTarget;
 
-    if (modFormEl.email.value === '' || modFormEl.password.value === '') {
+    if (modFormEl.email.value.trim() === '' || modFormEl.password.value.trim() === '') {
         return alert('Все поля должны быть заполнены!');
     }
 
     const userAnswear = {};
     
-    userAnswear.email = modFormEl.email.value;
-    userAnswear.password = modFormEl.password.value;
+    userAnswear.email = modFormEl.email.value.trim();
+    userAnswear.password = modFormEl.password.value.trim();
 
     console.log(userAnswear);
 
