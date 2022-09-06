@@ -4,15 +4,18 @@ textInput.addEventListener('blur', validation);
     
 function validation(event) {
 
-    const MAX_LENGTH = textInput.getAttribute('data-length');
-    
-    if (event.currentTarget.value.length < MAX_LENGTH) {
-        textInput.classList.remove('valid');
-        textInput.classList.add('invalid');
-    }
+    const MAX_LENGTH = Number(textInput.getAttribute('data-length'));
 
-    else if (event.currentTarget.value.length >= MAX_LENGTH) {
-        textInput.classList.add('valid');
-        textInput.classList.remove('invalid');
+    console.log('MAX_LENGTH', MAX_LENGTH);
+    
+    if (event.target.value.length === MAX_LENGTH) {
+        updateClasslist(textInput, 'valid', 'invalid');
+    } else {
+        updateClasslist(textInput, 'invalid', 'valid');
     }
+}
+
+function updateClasslist(where, addClass, remClass) {
+    where.classList.remove(remClass);
+    where.classList.add(addClass);
 }
